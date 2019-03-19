@@ -69,7 +69,8 @@ class SerializationTest(unittest.TestCase):
                 "secondEmail": "",
                 "firstName": "Some",
                 "lastName": "One",
-                "login": "asdfh@example.com"
+                "login": "asdfh@example.com",
+                "employeeNumber": "1"
             },
             "credentials": {
                 "provider": {
