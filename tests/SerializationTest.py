@@ -64,13 +64,23 @@ class SerializationTest(unittest.TestCase):
             "lastUpdated": "2015-04-08T18:34:43.000Z",
             "passwordChanged": null,
             "profile": {
-                "mobilePhone": null,
                 "email": "asdfh@example.com",
                 "secondEmail": "",
                 "firstName": "Some",
                 "lastName": "One",
                 "login": "asdfh@example.com",
-                "employeeNumber": "1"
+                "employeeNumber": "1",
+                "mobile_phone": null,
+                "telephone": null,
+                "country": "some country",
+                "homeOffice": "some home office",
+                "workingOffice": "some working office",
+                "department": "some department",
+                "departmentCode": "some department code",
+                "projectIds": [],
+                "role": "some role",
+                "joinDate": "some date"
+                
             },
             "credentials": {
                 "provider": {

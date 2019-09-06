@@ -3,25 +3,36 @@ class UserProfile:
     types = {
         'login': str,
         'email': str,
+        'employeeNumber': str,
         'secondEmail': str,
         'firstName': str,
         'lastName': str,
-        'mobilePhone': str,
-        'employeeNumber': str
+        'mobile_phone': str,
+        'telephone': str,
+        'homeOffice': str,
+        'workingOffice': str,
+        'department': str,
+        'departmentCode': str,
+        'projectIds': [],
+        'country': str,
+        'role': str,
+        'joinDate': str
     }
 
     def __init__(self):
-
-        self.login = None  # str
-
-        self.email = None  # str
-
-        self.secondEmail = None  # str
-
-        self.firstName = None  # str
-
-        self.lastName = None  # str
-
-        self.mobilePhone = None  # str
-        
-        self.employeeNumber = None  # str
+        self.login = None
+        self.email = None
+        self.employeeNumber = None
+        self.secondEmail = None
+        self.firstName = None
+        self.lastName = None
+        self.mobile_phone = None
+        self.telephone = None
+        self.homeOffice = None
+        self.workingOffice = None
+        self.department = None
+        self.departmentCode = None
+        self.projectIds = None
+        self.country = None
+        self.role = None
+        self.joinDate = None
