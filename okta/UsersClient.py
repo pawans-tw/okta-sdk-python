@@ -73,7 +73,7 @@ class UsersClient(ApiClient):
         :type user: User
         :rtype: User
         """
-        response = ApiClient.put_path(self, '/{0}'.format(uid), user)
+        response = ApiClient.post_path(self, '/{0}'.format(uid), user)
         return Utils.deserialize(response.text, User)
 
     def create_user(self, user, activate=None):
