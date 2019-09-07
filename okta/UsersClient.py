@@ -3,6 +3,7 @@ from okta.framework.Utils import Utils
 from okta.framework.PagedResults import PagedResults
 from okta.models.user import AppLinks
 from okta.models.user.User import User
+from okta.models.usergroup.UserGroup import UserGroup
 from okta.models.user.TempPassword import TempPassword
 from okta.models.user.ResetPasswordToken import ResetPasswordToken
 from okta.models.user.LoginCredentials import LoginCredentials
@@ -126,6 +127,17 @@ class UsersClient(ApiClient):
             }
             response = ApiClient.get_path(self, '/', params=params)
         return PagedResults(response, User)
+
+    def get_user_groups(self, uid):
+        """Get the groups of a user
+
+        :param uid: the user id
+        :type uid: str
+        :rtype: UserGroup
+        """
+        response = ApiClient.get_path(self, '/{0}/groups'.format(uid))
+        return Utils.deserialize(response.text, UserGroup)
+
 
     # LIFECYCLE
     

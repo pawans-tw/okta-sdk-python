@@ -61,6 +61,11 @@ class UsersClientTest(unittest.TestCase):
         user = client.get_user('mocktestexample-deleteme@mocktestexample.com')
         client.delete_user(user.id)
 
+    def test_get_user_groups(self):
+        client = build_client('/api/v1/users/:id - get user groups')
+        user = client.get_user('mocktestexample-fruitis@mocktestexample.com')
+        client.get_user_groups(user.id)
+
     def test_activate_user(self):
         client = build_client('/api/v1/users/:id/lifecycle - activates a user')
         user = client.get_user('mocktestexample-deactive@mocktestexample.com')
