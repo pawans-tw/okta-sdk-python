@@ -94,3 +94,12 @@ class UserGroupsClientTest(unittest.TestCase):
                  if group.profile.name == 'TestGroup']
         user = user_client.get_user('mocktestexample-frutis@mocktestexample.com')
         client.add_user_to_group(group[0], user)
+
+    def test_remove_user_from_group(self):
+        header_description = '/api/v1/groups/:id - remove user from group'
+        client = build_client(header_description)
+        user_client = build_users_client(header_description)
+        group = [group for group in client.get_groups()
+                 if group.profile.name == 'TestGroup']
+        user = user_client.get_user('mocktestexample-frutis@mocktestexample.com')
+        client.remove_user_from_group(group[0], user)
