@@ -13,7 +13,7 @@ class UserProfile:
         'workingOffice': str,
         'department': str,
         'departmentCode': str,
-        'projectIds': [],
+        'projectIds': list,
         'country': str,
         'role': str,
         'joinDate': str
