@@ -18,7 +18,8 @@ class User:
         'passwordChanged': datetime,
         'transitioningToStatus': str,
         'profile': UserProfile,
-        'credentials': LoginCredentials
+        'credentials': LoginCredentials,
+        'groupIds':[]
     }
 
     dict_types = {
@@ -62,6 +63,9 @@ class User:
 
         self.credentials = None  # LoginCredentials
 
+        # list of groups ids, especially used to create users into group(s)
+        self.groupIds = None
+
         self.links = None
 
         # Populate profile
@@ -70,3 +74,5 @@ class User:
             if attr in kwargs:
                 self.profile = self.profile or UserProfile()
                 setattr(self.profile, attr, kwargs[attr])
+        if 'groupIds' in kwargs:
+            self.groupIds = [kwargs['groupIds']]

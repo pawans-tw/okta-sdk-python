@@ -42,7 +42,42 @@ class UsersClientTest(unittest.TestCase):
         user = User(login='mocktestexample-brutis@mocktestexample.com',
                     email='mocktestexample-brutis@mocktestexample.com',
                     firstName='First',
-                    lastName='McJanky')
+                    lastName='McJanky',
+                    secondEmail='asdrg@example.com',
+                    employeeNumber='1',
+                    mobile_phone='some mobile number',
+                    telephone='some telephone number',
+                    country='some country',
+                    homeOffice='some home office',
+                    workingOffice='some working office',
+                    department='some department',
+                    departmentCode='some department code',
+                    projectIds=['some project id'],
+                    role='some role',
+                    joinDate='some date'
+        )
+        client.create_user(user)
+
+    def test_creates_a_user_in_a_group(self):
+        client = build_client('/api/v1/users/:id - creates a user without credentials')
+        user = User(login='mocktestexample-brutis@mocktestexample.com',
+                    email='mocktestexample-brutis@mocktestexample.com',
+                    firstName='First',
+                    lastName='McJanky',
+                    secondEmail='asdrg@example.com',
+                    employeeNumber='1',
+                    mobile_phone='some mobile number',
+                    telephone='some telephone number',
+                    country='some country',
+                    homeOffice='some home office',
+                    workingOffice='some working office',
+                    department='some department',
+                    departmentCode='some department code',
+                    projectIds=['some project id'],
+                    role='some role',
+                    joinDate='some date',
+                    groupIds=['some group id']
+        )
         client.create_user(user)
 
     def test_update_a_user(self):

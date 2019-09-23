@@ -80,7 +80,6 @@ class SerializationTest(unittest.TestCase):
                 "projectIds": ['some project id'],
                 "role": "some role",
                 "joinDate": "some date"
-                
             },
             "credentials": {
                 "provider": {
