@@ -13,7 +13,6 @@ class UserProfile:
         'workingOffice': str,
         'department': str,
         'departmentCode': str,
-        'projectIds': list,
         'country': str,
         'role': str,
         'joinDate': str
@@ -32,7 +31,6 @@ class UserProfile:
         self.workingOffice = None
         self.department = None
         self.departmentCode = None
-        self.projectIds = None
         self.country = None
         self.role = None
         self.joinDate = None

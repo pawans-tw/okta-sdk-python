@@ -77,7 +77,6 @@ class SerializationTest(unittest.TestCase):
                 "workingOffice": "some working office",
                 "department": "some department",
                 "departmentCode": "some department code",
-                "projectIds": ['some project id'],
                 "role": "some role",
                 "joinDate": "some date"
             },
